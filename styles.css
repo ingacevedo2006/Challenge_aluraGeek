@@ -6,7 +6,6 @@
 
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
   background-color: #f5f5f5;
   color: #333;
   padding: 20px;
@@ -21,16 +20,61 @@ h1 {
   color: #007BFF;
 }
 
-main {
-  max-width: 900px;
-  margin: 0 auto;
+.container {
+  display: flex;
+  gap: 20px;
 }
 
-.form-section, .products-section {
+/* Sección izquierda (MIS PRODUCTOS) */
+.products-container {
+  flex: 2;
   background: #fff;
-  border-radius: 8px;
   padding: 20px;
-  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.products-container h2 {
+  margin-bottom: 15px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.product-card h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.product-card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Sección derecha (Formulario) */
+.form-container {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -69,42 +113,3 @@ button {
   color: #fff;
 }
 
-.product-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.product-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.product-card img {
-  max-width: 100%;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-.product-card h3 {
-  margin-bottom: 8px;
-  font-size: 18px;
-}
-
-.product-card p {
-  margin-bottom: 10px;
-  font-size: 14px;
-}
-
-.product-card button {
-  background-color: #f44336;
-  color: #fff;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}

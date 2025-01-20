@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Geek Product Form</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Para los íconos -->
 </head>
 <body>
   <header>
@@ -15,7 +16,15 @@
     <section class="products-container">
       <h2>MIS PRODUCTOS</h2>
       <div id="productGrid" class="product-grid">
-        <!-- Aquí se renderizan los productos -->
+        <!-- Ejemplo de contenedor vacío -->
+        <div class="product-card">
+          <div class="placeholder-image">No Image</div>
+          <h3>Nombre del Producto</h3>
+          <div class="price-frame">$0.00</div>
+          <button class="delete-btn">
+            <i class="fas fa-trash-alt"></i> Eliminar
+          </button>
+        </div>
       </div>
     </section>
 
@@ -45,4 +54,3 @@
   <script src="app.js"></script>
 </body>
 </html>
-
